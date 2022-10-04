@@ -8,11 +8,13 @@ function App() {
 	const [addingPerformance, setAddingPerformance] = useState("false")
 	const [studentsResult, setStudentsResult] = useState([]);
 
+	// handling side effect
 	useEffect(() => {
 		collect().then(results =>{
 			console.log(results)
 		})
 	}, [])
+	
 	return (
 
 		<main>
