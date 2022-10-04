@@ -27,6 +27,7 @@ const [saving, setSaving] = useState(false)
 		setSaving(true)
 		post(formData).then(newResult =>{
 			setSaving(false)
+			console.log(newResult)
 		});
 	}
 
@@ -44,7 +45,7 @@ const [saving, setSaving] = useState(false)
 			<input type="text" name="Target" value={formData.Target}  onChange={handleChange}/>
 		</div>
 		<div>
-			<button disabled={saving}> Save</button>
+			<button disabled={saving}>{saving ? 'saving...' : 'save result'}</button>
 		</div>
 	</form>
 }

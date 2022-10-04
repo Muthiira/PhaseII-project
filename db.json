@@ -1,31 +1,40 @@
 {
-	"Performance": [
-	  {
-		"Student": "Caleb",
-		"Performance": 80,
-		"Target": 90,
-		"id": 1
-	  },
-
-	  {
-		"Student": "Max",
-		"Performance": 80,
-		"Target": 90,
-		"id": 2
-	  },
-
-	  {
-		"Student": "Bill",
-		"Performance": 80,
-		"Target": 90,
-		"id": 3
-	  },
-	  {
-		"Student": "Duncan",
-		"Performance": 80,
-		"Target": 90,
-		"id": 4
-	  }
-	]
-
-  }
+  "Performance": [
+    {
+      "Student": "Caleb",
+      "Performance": 80,
+      "Target": 90,
+      "id": 1
+    },
+    {
+      "Student": "Max",
+      "Performance": 80,
+      "Target": 90,
+      "id": 2
+    },
+    {
+      "Student": "Bill",
+      "Performance": 80,
+      "Target": 90,
+      "id": 3
+    },
+    {
+      "Student": "Duncan",
+      "Performance": 80,
+      "Target": 90,
+      "id": 4
+    },
+    {
+      "Student": "Ray",
+      "Performance": "80",
+      "Target": 0,
+      "id": 5
+    },
+    {
+      "Student": "Ray",
+      "Performance": "80",
+      "Target": "80",
+      "id": 6
+    }
+  ]
+}
