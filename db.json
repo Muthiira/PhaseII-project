@@ -1,29 +1,29 @@
 {
 	"Performance": [
 	  {
-		"Student-name": "Caleb",
-		"Performance-grade": "80",
-		"target": "90",
+		"Student": "Caleb",
+		"Performance": 80,
+		"Target": 90,
 		"id": 1
 	  },
 
 	  {
-		"Student-name": "Max",
-		"Performance-grade": "80",
-		"target": "90",
+		"Student": "Max",
+		"Performance": 80,
+		"Target": 90,
 		"id": 2
 	  },
 
 	  {
-		"Student-name": "Bill",
-		"Performance-grade": "80",
-		"target": "90",
+		"Student": "Bill",
+		"Performance": 80,
+		"Target": 90,
 		"id": 3
 	  },
 	  {
-		"Student-name": "Duncan",
-		"Performance-grade": "80",
-		"target": "90",
+		"Student": "Duncan",
+		"Performance": 80,
+		"Target": 90,
 		"id": 4
 	  }
 	]
