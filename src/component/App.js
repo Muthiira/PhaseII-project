@@ -19,8 +19,13 @@ function App() {
 	function updateResults(newResult) {
 // if newUpdate is defined update result if not defined add into the array
 		if(newUpdate){
-			const index = studentsResult.findIndex(r => r.id == newResult.id)
+			const index = studentsResult.findIndex(r => r.id == newResult.id);
 			console.log(index)
+			// updating form using index
+			let latestUpdate = [...studentsResult];
+			latestUpdate[index] = newResult;
+			setStudentsResult(latestUpdate);
+
 		}else{
 			setStudentsResult([...studentsResult, newResult]);
 		}
