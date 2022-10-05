@@ -1,12 +1,6 @@
 {
   "Performance": [
     {
-      "Student": "Max",
-      "Performance": "90",
-      "Target": 90,
-      "id": 2
-    },
-    {
       "Student": "Bill",
       "Performance": 80,
       "Target": 90,

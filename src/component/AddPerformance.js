@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { post, patch } from "./crud";
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 
 
 export default function AddPerformance({ onSaved, defaultData }) {
@@ -42,15 +44,22 @@ export default function AddPerformance({ onSaved, defaultData }) {
 			});
 		}
 	}
-	return (<form  onSubmit={addResult}>
+	return <form  onSubmit={addResult}>
 		<div>
 			<TextField id="filled-basic" label="Student" variant="filled" type="text" name="Student" value={formData.Student} onChange={handleChange} />
+			</div>
+			<div>
 			<TextField id="filled-basic" label="Performance" variant="filled" type="text" name="Performance" value={formData.Performance} onChange={handleChange} />
+			</div>
+			<div>
 			<TextField id="filled-basic" label="Target" variant="filled" type="text" name="Target" value={formData.Target}  onChange={handleChange}/>
+			</div>
+			<div>
+			<Button variant="outlined" disabled={saving}>{saving ? 'saving...' : 'save result'}</Button>
 
 		</div>
 		</form>
-	)
+	
 
 
 
