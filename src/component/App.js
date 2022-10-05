@@ -11,15 +11,20 @@ function App() {
 	// handling side effect
 	useEffect(() => {
 		collect().then(results =>{
-			console.log(results)
+			setStudentsResult(results)
 		})
 	}, [])
-	
+//  callback function to update results
+	function updateResults(newResult){
+		setStudentsResult([...studentsResult, newResult]);
+		setAddingPerformance(false);
+	}
+
 	return (
 
 		<main>
 			<button type="button" onClick={ () =>setAddingPerformance(!addingPerformance)} >{addingPerformance ? "cancel" : "addPerformance"}</button>
-			{addingPerformance ? <AddPerformance /> : <StudentResult  StudentResult={studentsResult}/>}
+			{addingPerformance ? <AddPerformance onSaved={updateResults} /> : <StudentResult  StudentResult={studentsResult}/>}
 			
 		</main>
 	)

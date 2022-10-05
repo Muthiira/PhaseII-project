@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { post } from "./crud";
 
-export default function AddPerformance (){
+export default function AddPerformance ({onSaved}){
 
 // deriving input values from state(making it controlled)
 	const [formData, setFormData] = useState({
@@ -26,8 +26,9 @@ const [saving, setSaving] = useState(false)
 		event.preventDefault();
 		setSaving(true)
 		post(formData).then(newResult =>{
-			setSaving(false)
-			console.log(newResult)
+			setSaving(false);
+			onSaved(newResult);
+			console.log(newResult);
 		});
 	}
 

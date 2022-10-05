@@ -5,3 +5,12 @@ body {
 	align-self: center;
 	/*   */
 }
+
+table td, table th {
+	padding: 15px;
+}
+
+table tr:nth-child(even) {
+	background-color: grey;
+}
+
