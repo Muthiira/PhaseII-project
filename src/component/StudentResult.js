@@ -1,9 +1,7 @@
 import { useState } from "react"
 
-export default function StudentResult({StudentResult}){
+export default function StudentResult({StudentResult, update}){
 	
-	const[update, setUpdate] = useState();
-
 	return <table>
 		<thead>
 		<tr>
@@ -19,7 +17,7 @@ export default function StudentResult({StudentResult}){
 			<td>{result.Performance}</td>
 			<td>{result.Target}</td>
 			<td>
-				<button type="button">UPDATE</button>
+				<button  onclick={() => update(result)} type="button">UPDATE</button>
 			</td>
 			</tr>)}
 		</tbody>
