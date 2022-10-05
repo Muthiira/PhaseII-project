@@ -14,7 +14,7 @@ export function post(result){
 		headers:{
 			"Content-Type": "application/json"
 		}
-	}).then((resp) => resp.json())
+	}).then((resp) => resp.json()) 
 }
 
 // updating data

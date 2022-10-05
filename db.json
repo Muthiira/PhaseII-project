@@ -47,6 +47,12 @@
       "Performance": "90",
       "Target": "90",
       "id": 8
+    },
+    {
+      "Student": "Caleb",
+      "Performance": "90",
+      "Target": 90,
+      "id": 9
     }
   ]
 }

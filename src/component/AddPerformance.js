@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { post } from "./crud";
+import { post, patch } from "./crud";
 
 export default function AddPerformance ({onSaved, defaultData}){
 
@@ -25,11 +25,19 @@ const [saving, setSaving] = useState(false)
 	function addResult(event){
 		event.preventDefault();
 		setSaving(true)
+// if default is not defined just update,if not defined create
+		if(defaultData){
+			patch(formData).then((updatedPerformance) => {
+			setSaving(false);
+			onSaved(updatedPerformance);
+			console.log(updatedPerformance);
+			})
+		}else{
 		post(formData).then(newResult =>{
 			setSaving(false);
 			onSaved(newResult);
 			console.log(newResult);
-		});
+		});}
 	}
 
 	return <form onSubmit={addResult}>

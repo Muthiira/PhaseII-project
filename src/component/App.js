@@ -5,7 +5,7 @@ import { collect } from "./crud";
 
 
 function App() {
-	const [addingPerformance, setAddingPerformance] = useState([]);
+	const [addingPerformance, setAddingPerformance] = useState(false);
 	const [studentsResult, setStudentsResult] = useState([]);
 	const [newUpdate, setNewUpdate] = useState();
 
