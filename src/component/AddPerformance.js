@@ -1,13 +1,13 @@
 import React, {useState} from "react"
 import { post } from "./crud";
 
-export default function AddPerformance ({onSaved}){
+export default function AddPerformance ({onSaved, defaultData}){
 
 // deriving input values from state(making it controlled)
 	const [formData, setFormData] = useState({
-		Student: "",
-		Performance: 0,
-		Target: 0
+		Student: defaultData ? defaultData.Student : "",
+		Performance: defaultData ?  defaultData.Performance : "",
+		Target: defaultData ?   defaultData.Target : ""
 });
 
 // including loader
@@ -35,7 +35,7 @@ const [saving, setSaving] = useState(false)
 	return <form onSubmit={addResult}>
 		<div>
 			<label>Student</label>
-			<input type="text" name="Student" value={formData.Student} onChange={handleChange}/>
+			<input type="text" name="Student" value={formData.Student}  onChange={handleChange}/>
 		</div>
 		<div>
 			<label>Perfomance</label>

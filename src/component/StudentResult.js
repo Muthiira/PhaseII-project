@@ -17,7 +17,8 @@ export default function StudentResult({StudentResult, update}){
 			<td>{result.Performance}</td>
 			<td>{result.Target}</td>
 			<td>
-				<button  onclick={() => update(result)} type="button">UPDATE</button>
+				{/* passing callback function for update */}
+				<button  onClick={() => update(result)} type="button">UPDATE</button>
 			</td>
 			</tr>)}
 		</tbody>
