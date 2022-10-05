@@ -17,7 +17,13 @@ function App() {
 	}, [])
 //  callback function to update results
 	function updateResults(newResult) {
-		setStudentsResult([...studentsResult, newResult]);
+// if newUpdate is defined update result if not defined add into the array
+		if(newUpdate){
+			const index = studentsResult.findIndex(r => r.id == newResult.id)
+			console.log(index)
+		}else{
+			setStudentsResult([...studentsResult, newResult]);
+		}
 		setAddingPerformance(false);
 	}
 // function that handles patch(edit)

@@ -8,7 +8,7 @@ export function collect(){
 
 // posting data to backend
 export function post(result){
-	return fetch(api ,{
+	return fetch(`${api}/${result.id}`,{
 		method : "POST",
 		body: JSON.stringify(result),
 		headers:{
@@ -18,6 +18,12 @@ export function post(result){
 }
 
 // updating data
-export function patch(){
-
+export function patch(result){
+	return fetch(api ,{
+		method : "PATCH",
+		body: JSON.stringify(result),
+		headers:{
+			"Content-Type": "application/json"
+		}
+	}).then((resp) => resp.json()) 
 }

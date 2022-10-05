@@ -25,9 +25,9 @@ const [saving, setSaving] = useState(false)
 	function addResult(event){
 		event.preventDefault();
 		setSaving(true)
-// if default is not defined just update,if not defined create
+// if defaultData is defined update,if not defined create
 		if(defaultData){
-			patch(formData).then((updatedPerformance) => {
+			patch({...formData, id:defaultData.id} ).then((updatedPerformance) => {
 			setSaving(false);
 			onSaved(updatedPerformance);
 			console.log(updatedPerformance);
