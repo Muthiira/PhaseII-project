@@ -27,7 +27,7 @@ const [saving, setSaving] = useState(false)
 		setSaving(true)
 // if defaultData is defined update,if not defined create
 		if(defaultData){
-			patch({...formData, id:defaultData.id} ).then((updatedPerformance) => {
+			patch({...formData, id:defaultData.id}).then((updatedPerformance) => {
 			setSaving(false);
 			onSaved(updatedPerformance);
 			console.log(updatedPerformance);

@@ -19,7 +19,7 @@ export function post(result){
 
 // updating data
 export function patch(result){
-	return fetch(api ,{
+	return fetch(`${api}/${result.id}` ,{
 		method : "PATCH",
 		body: JSON.stringify(result),
 		headers:{
