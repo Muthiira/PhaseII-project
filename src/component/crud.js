@@ -8,7 +8,7 @@ export function collect(){
 
 // posting data to backend
 export function post(result){
-	return fetch(`${api}/${result.id}`,{
+	return fetch(api,{
 		method : "POST",
 		body: JSON.stringify(result),
 		headers:{

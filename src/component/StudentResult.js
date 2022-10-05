@@ -1,4 +1,5 @@
-import { useState } from "react"
+import React from "react"
+import Button from '@mui/material/Button';
 
 export default function StudentResult({StudentResult, update, Delete}){
 	
@@ -18,8 +19,8 @@ export default function StudentResult({StudentResult, update, Delete}){
 			<td>{result.Target}</td>
 			<td>
 				{/* passing callback function for update */}
-				<button  onClick={() => update(result)} type="button">UPDATE</button>
-				<button  onClick={() => Delete(result.id)} type="button">DELETE</button>
+				<Button  variant="text" onClick={() => update(result)} type="button">UPDATE</Button>
+				<Button variant="outlined" onClick={() => Delete(result.id)} type="button">DELETE</Button>
 			</td>
 			</tr>)}
 		</tbody>
