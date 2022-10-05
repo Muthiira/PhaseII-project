@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function StudentResult({StudentResult, update}){
+export default function StudentResult({StudentResult, update, Delete}){
 	
 	return <table>
 		<thead>
@@ -19,6 +19,7 @@ export default function StudentResult({StudentResult, update}){
 			<td>
 				{/* passing callback function for update */}
 				<button  onClick={() => update(result)} type="button">UPDATE</button>
+				<button  onClick={() => Delete(result.id)} type="button">DELETE</button>
 			</td>
 			</tr>)}
 		</tbody>

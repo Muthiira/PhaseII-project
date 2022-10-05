@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AddPerformance from "./AddPerformance";
 import StudentResult from "./StudentResult";
-import { collect } from "./crud";
+import { collect, Delete } from "./crud";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 		if(newUpdate){
 			const index = studentsResult.findIndex(r => r.id == newResult.id);
 			console.log(index)
-			// updating form using index
+// updating form using index
 			let latestUpdate = [...studentsResult];
 			latestUpdate[index] = newResult;
 			setStudentsResult(latestUpdate);
@@ -36,7 +36,16 @@ function App() {
 		setNewUpdate(result)
 		setAddingPerformance(true)
 	}
-
+// function that handles delete
+	function onDelete(id){
+		Delete(id).then(resp => {
+			const index = studentsResult.findIndex(r => r.id == id);
+			console.log(index)
+			let latestUpdate = [...studentsResult];
+			latestUpdate.splice(index, 1);
+			setStudentsResult(latestUpdate);
+		})
+	}
 
 
 	return (
@@ -45,7 +54,7 @@ function App() {
 			<button type="button" onClick={() => setAddingPerformance(!addingPerformance)} >{addingPerformance ? "cancel" : "addPerformance"}</button>
 			{addingPerformance ?
 				<AddPerformance onSaved={updateResults} defaultData={newUpdate} /> :
-				<StudentResult StudentResult={studentsResult} update={onUpdate} />}
+				<StudentResult StudentResult={studentsResult} update={onUpdate}  Delete={onDelete}/>}
 
 		</main>
 	)
