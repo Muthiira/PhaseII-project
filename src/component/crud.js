@@ -28,6 +28,7 @@ export function patch(result){
 	}).then((resp) => resp.json()) 
 }
 
+// deleting data
 export function Delete(id){
 	return fetch(`${api}/${id}` ,{
 		method : "DELETE",

@@ -44,41 +44,41 @@ export default function AddPerformance({ onSaved, defaultData }) {
 			});
 		}
 	}
-	// return <form  onSubmit={addResult}>
-	// 	<div>
-	// 		<TextField id="filled-basic" label="Student" variant="filled" type="text" name="Student" value={formData.Student} onChange={handleChange} />
-	// 		</div>
-	// 		<div>
-	// 		<TextField id="filled-basic" label="Performance" variant="filled" type="text" name="Performance" value={formData.Performance} onChange={handleChange} />
-	// 		</div>
-	// 		<div>
-	// 		<TextField id="filled-basic" label="Target" variant="filled" type="text" name="Target" value={formData.Target}  onChange={handleChange}/>
-	// 		</div>
-	// 		<div>
-	// 		<Button variant="outlined" disabled={saving}>{saving ? 'saving...' : 'save result'}</Button>
+	return <form  onSubmit={addResult}>
+		<div>
+			<TextField id="filled-basic" label="Student" variant="filled" type="text" name="Student" value={formData.Student} onChange={handleChange} />
+			</div>
+			<div>
+			<TextField id="filled-basic" label="Performance" variant="filled" type="text" name="Performance" value={formData.Performance} onChange={handleChange} />
+			</div>
+			<div>
+			<TextField id="filled-basic" label="Target" variant="filled" type="text" name="Target" value={formData.Target}  onChange={handleChange}/>
+			</div>
+			<div>
+			<button id="button" variant="outlined" disabled={saving}>{saving ? 'saving...' : 'save result'}</button>
 
-	// 	</div>
-	// 	</form>
+		</div>
+		</form>
 	
 
 
 
-	return <form onSubmit={addResult}>
-		<div>
-			<label>Student</label>
-			<input type="text" name="Student" value={formData.Student}  onChange={handleChange}/>
+	// return <form onSubmit={addResult}>
+	// 	<div>
+	// 		<label>Student</label>
+	// 		<input type="text" name="Student" value={formData.Student}  onChange={handleChange}/>
 
-		</div>
-		<div>
-			<label>Perfomance</label>
-			<input type="text" name="Performance" value={formData.Performance}  onChange={handleChange}/>
-		</div>
-		<div>
-			<label>Target</label>
-			<input type="text" name="Target" value={formData.Target}  onChange={handleChange}/>
-		</div>
-		<div>
-			<button disabled={saving}>{saving ? 'saving...' : 'save result'}</button>
-		</div>
-	</form>
+	// 	</div>
+	// 	<div>
+	// 		<label>Perfomance</label>
+	// 		<input type="text" name="Performance" value={formData.Performance}  onChange={handleChange}/>
+	// 	</div>
+	// 	<div>
+	// 		<label>Target</label>
+	// 		<input type="text" name="Target" value={formData.Target}  onChange={handleChange}/>
+	// 	</div>
+	// 	<div>
+	// 		<button disabled={saving}>{saving ? 'saving...' : 'save result'}</button>
+	// 	</div>
+	// </form>
 }
