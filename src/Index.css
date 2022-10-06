@@ -14,3 +14,7 @@ table tr:nth-child(even) {
 	background-color: grey;
 }
 
+/* #form {
+	padding: 10px;
+	border-color: black;
+} */
